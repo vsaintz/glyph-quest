@@ -1,98 +1,71 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import React, { ReactNode } from 'react'
+import { View, Image, Text, Dimensions } from 'react-native'
+import Ionicons from '@expo/vector-icons/Ionicons'
+import Entypo from '@expo/vector-icons/Entypo'
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+const { width } = Dimensions.get('window')
 
-export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
-
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
+type IconButtonProps = {
+  children: ReactNode;
 }
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+const IconButton = ({ children }: IconButtonProps) => (
+  <View className="border border-white rounded-full px-4 py-1 bg-transparent justify-center items-center">
+    {children}
+  </View>
+)
+
+type TextBadgeProps = {
+  text: string;
+}
+
+const TextBadge = ({ text }: TextBadgeProps) => (
+  <View className="absolute -top-2 -right-7 w-7 h-7 rounded-full border border-white justify-center items-center">
+    <Text className="text-[10px] text-white font-bold">{text}</Text>
+  </View>
+)
+
+export default function Index() {
+  return (
+    <View className="w-full h-full bg-black">
+      <Image
+        source={require('@/assets/images/pexels-aloevera-17612352.jpg')}
+        className="absolute w-full h-full z-0"
+        resizeMode="cover"
+        accessible
+        accessibilityLabel="Background image of Aloe Vera"
+      />
+
+      <View className="flex-row items-center px-5 mt-[110%]">
+        <View className="relative">
+          <Text className="text-[45px] text-white">Roavia</Text>
+          <TextBadge text="TM" />
+        </View>
+      </View>
+
+      <View
+        className="flex-row justify-evenly items-center mt-10 mr-2 ml-auto"
+        style={{ width: width * 0.65 }}
+      >
+        <IconButton>
+          <Entypo name="location-pin" size={24} color="#fff" />
+        </IconButton>
+        <IconButton>
+          <Ionicons name="cafe-outline" size={24} color="#fff" />
+        </IconButton>
+        <IconButton>
+          <Ionicons name="restaurant-outline" size={24} color="#fff" />
+        </IconButton>
+      </View>
+
+      <View
+        className="mt-4 mr-2 ml-auto"
+        style={{ width: width * 0.65 }}
+      >
+        <Text className="text-white text-[15px] leading-5 text-justify">
+          Find your place—whether it’s a cozy café, a hillside homestay, or a hidden local shop.
+        </Text>
+      </View>
+    </View>
+  )
+}
