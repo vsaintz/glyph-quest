@@ -2,6 +2,7 @@ import { Tabs } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 import Octicons from '@expo/vector-icons/Octicons'
+import Feather from '@expo/vector-icons/Feather'
 import type { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
 import CustomTabBar from '@/app/components/layout/tabbar'
 
@@ -39,7 +40,15 @@ export default function TabLayout() {
               return (
                 <Octicons
                   name="dot-fill"
-                  size={26}
+                  size={30}
+                  color={color}
+                />
+              )
+            case 'models':
+              return (
+                <Feather
+                  name="box"
+                  size={23}
                   color={color}
                 />
               )
@@ -47,7 +56,7 @@ export default function TabLayout() {
               return (
                 <Ionicons
                   name="ellipse-outline"
-                  size={24}
+                  size={26}
                   color={color}
                 />
               )
