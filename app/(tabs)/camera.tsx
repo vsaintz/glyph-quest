@@ -1,48 +1,63 @@
-import React from "react";
-import { View, Text, Button, StatusBar, Platform } from "react-native";
-import { CameraView, useCameraPermissions } from "expo-camera";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import React, { useState } from "react"
+import { View, Text, Button, TouchableOpacity, Image } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context"
+import { CameraView, useCameraPermissions } from "expo-camera"
+import { useRouter } from "expo-router"
+import { saveModel } from "@/utils/storage"
 
 export default function Camera() {
-    const [permission, requestPermission] = useCameraPermissions();
+    const [permission, requestPermission] = useCameraPermissions()
+    const [scanned, setScanned] = useState(false)
+    const router = useRouter()
 
-    if (!permission) {
-        return <View />;
+    const handleScan = (data: string) => {
+        if (scanned) return
+        setScanned(true)
+        saveModel(data.trim())
+        router.push(`/model-viewer?modelUrl=${encodeURIComponent(data.trim())}`)
     }
 
-    if (!permission.granted) {
+    if (!permission) return <View />
+    if (!permission.granted)
         return (
-            <View className="flex-1 items-center justify-center bg-black">
-                <Text className="mb-4 text-white">
-                    We need your permission to show the camera
-                </Text>
-                <Button onPress={requestPermission} title="Grant permission" />
+            <View className="flex flex-1 justify-center items-center">
+                <View className="m-3 p-3 py-5">
+                    <Image
+                        source={require('@/assets/illustration/camera.png')}
+                        className="mx-auto w-12 h-12"
+                    />
+                    <Text className="text-center text-black text-2xl mt-7 mb-2">
+                        Enable Camera Access
+                    </Text>
+                    <Text className="text-center text-[#6b7280] text-sm">
+                        To scan QR codes, please grant permission to access your device's camera. The camera will only be used for scanning and no images will be saved.
+                    </Text>
+                    <TouchableOpacity
+                        className="bg-black w-auto p-3 rounded-xl mt-7"
+                        onPress={requestPermission}
+                    >
+                        <Text className="text-center text-white"> Grant permission </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
-        );
-    }
-
+        )
     return (
-        <SafeAreaProvider
-            style={{
-                flex: 1,
-                backgroundColor: "black",
-                paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-            }}
-        >
-            <StatusBar barStyle="light-content" backgroundColor="black" translucent />
-
-            <CameraView
-                style={{ flex: 1 }}
-                facing="back"
-                onBarcodeScanned={({ data }) => {
-                    console.log("Scanned data:", data);
-                }}
-            >
+        <SafeAreaView style={{ flex: 1 }} edges={['top']}>
+            <View style={{ flex: 1 }}>
+                <CameraView
+                    style={{ flex: 1 }}
+                    facing="back"
+                    onBarcodeScanned={({ data }) => { handleScan(data) }}
+                />
                 <View
                     style={{
-                        flex: 1,
-                        alignItems: "center",
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
                         justifyContent: "center",
+                        alignItems: "center",
                     }}
                 >
                     <View
@@ -55,11 +70,18 @@ export default function Camera() {
                             backgroundColor: "transparent",
                         }}
                     />
-                    <Text className="text-white text-center w-full mt-5 text-xs">
+                    <Text
+                        style={{
+                            color: "white",
+                            textAlign: "center",
+                            marginTop: 5,
+                            fontSize: 12,
+                        }}
+                    >
                         Align the QR code within the frame
                     </Text>
                 </View>
-            </CameraView>
-        </SafeAreaProvider>
-    );
+            </View>
+        </SafeAreaView>
+    )
 }
