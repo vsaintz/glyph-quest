@@ -1,75 +1,52 @@
-import React, { ReactNode } from 'react'
-import { View, Image, Text, Dimensions, Platform, StatusBar } from 'react-native'
-import Ionicons from '@expo/vector-icons/Ionicons'
-import Entypo from '@expo/vector-icons/Entypo'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-
-const { width } = Dimensions.get('window')
-
-type IconButtonProps = {
-  children: ReactNode;
-}
-
-const IconButton = ({ children }: IconButtonProps) => (
-  <View className="border border-white rounded-full px-4 py-1 bg-transparent justify-center items-center">
-    {children}
-  </View>
-)
-
-type TextBadgeProps = {
-  text: string;
-}
-
-const TextBadge = ({ text }: TextBadgeProps) => (
-  <View className="absolute -top-2 -right-7 w-7 h-7 rounded-full border border-white justify-center items-center">
-    <Text className="text-[10px] text-white font-bold">{text}</Text>
-  </View>
-)
+import React from "react"
+import { View, Text, TouchableOpacity, Image } from "react-native"
+import { useRouter } from "expo-router"
+import { Svg, Path } from "react-native-svg"
 
 export default function Index() {
+
+  const router = useRouter()
+
   return (
-    <SafeAreaProvider style={[{ flex: 1, backgroundColor: "black", paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }]}>
-      <StatusBar barStyle="light-content" backgroundColor="black" />
-      <View className="w-full h-full bg-black">
+    <View className="flex-1 bg-white items-center justify-center px-2">
+      <View className="w-full">
         <Image
-          source={require('@/assets/images/pexels-aloevera-17612352.jpg')}
-          className="absolute w-full h-full z-0"
-          resizeMode="cover"
-          accessible
-          accessibilityLabel="Background image of Aloe Vera"
+          source={require('@/assets/illustration/map.png')}
+          className="mx-auto w-28 h-28"
         />
-
-        <View className="flex-row items-center px-5 mt-[110%]">
-          <View className="relative">
-            <Text className="text-[45px] text-white">Roavia</Text>
-            <TextBadge text="TM" />
-          </View>
-        </View>
-
-        <View
-          className="flex-row justify-evenly items-center mt-10 mr-2 ml-auto"
-          style={{ width: width * 0.65 }}
-        >
-          <IconButton>
-            <Entypo name="location-pin" size={24} color="#fff" />
-          </IconButton>
-          <IconButton>
-            <Ionicons name="cafe-outline" size={24} color="#fff" />
-          </IconButton>
-          <IconButton>
-            <Ionicons name="restaurant-outline" size={24} color="#fff" />
-          </IconButton>
-        </View>
-
-        <View
-          className="mt-4 mr-2 ml-auto"
-          style={{ width: width * 0.65 }}
-        >
-          <Text className="text-white text-[15px] leading-5 text-justify">
-            Find your place—whether it’s a cozy café, a hillside homestay, or a hidden local shop.
-          </Text>
-        </View>
       </View>
-    </SafeAreaProvider>
-  )
+
+      <Text className="text-black text-3xl font-bold tracking-wide text-center mt-10">
+        Tech Treasure Hunt
+      </Text>
+
+      <Text className="w-full text-neutral-400 text-base mt-3 text-center px-4">
+        Scan QR codes placed across campus. Each code reveals a 3D model with
+        hidden hints. Work in teams, solve riddles, and race to the finish.
+      </Text>
+
+      <TouchableOpacity
+        className="mt-10 bg-black rounded-2xl px-8 py-4 shadow-lg"
+        onPress={() => router.push('/(tabs)/camera')}
+        activeOpacity={0.8}
+      >
+        <Text className="text-white text-md font-semibold">Start Hunt</Text>
+      </TouchableOpacity>
+
+      <Svg
+        height="80"
+        width="200"
+        viewBox="0 0 200 80"
+        className="absolute bottom-10"
+      >
+        <Path
+          d="M10 70 Q 95 10, 190 70"
+          stroke="black"
+          strokeWidth="1"
+          fill="none"
+          strokeDasharray="6 6"
+        />
+      </Svg>
+    </View>
+  );
 }

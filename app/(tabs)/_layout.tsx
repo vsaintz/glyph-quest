@@ -1,10 +1,9 @@
-import { Tabs } from 'expo-router'
-import { Ionicons } from '@expo/vector-icons'
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
-import Octicons from '@expo/vector-icons/Octicons'
-import Feather from '@expo/vector-icons/Feather'
-import type { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
-import CustomTabBar from '@/app/components/layout/tabbar'
+import { Tabs } from "expo-router"
+import { Ionicons } from "@expo/vector-icons"
+import Feather from "@expo/vector-icons/Feather"
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
+import type { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs"
+import TabBar from "@/components/layout/tabbar"
 
 export default function TabLayout() {
   return (
@@ -12,54 +11,54 @@ export default function TabLayout() {
       screenOptions={({ route }): BottomTabNavigationOptions => ({
         headerShown: false,
         tabBarShowLabel: false,
+
         tabBarStyle: {
-          height: 70,
-          backgroundColor: '#fff',
-          borderTopLeftRadius: 16,
-          borderTopRightRadius: 16,
-          elevation: 10,
-          shadowColor: '#000',
-          shadowOffset: { width: 0, height: -2 },
-          shadowOpacity: 0.08,
-          shadowRadius: 6,
+          position: "absolute",
+          left: 16,
+          right: 16,
+          bottom: 20,
+          height: 55,
+          marginHorizontal: 10,
+          borderRadius: 15,
+          paddingTop: 10,
+          borderWidth: 1,
+          elevation: 0,
         },
-        tabBarActiveTintColor: '#111827',
-        tabBarInactiveTintColor: '#9CA3AF',
-        tabBarButton: (props) => <CustomTabBar {...props} />,
+
+        tabBarActiveTintColor: "#000",
+        tabBarInactiveTintColor: "#808080",
+        tabBarButton: (props) => <TabBar {...props} />,
+
         tabBarIcon: ({ color }) => {
           switch (route.name) {
-            case 'index':
+            case "index":
               return (
                 <MaterialCommunityIcons
                   name="home-roof"
-                  size={26}
-                  color={color}
-                />
-              )
-            case 'camera':
-              return (
-                <Octicons
-                  name="dot-fill"
                   size={30}
                   color={color}
                 />
               )
-            case 'models':
+            case "camera":
               return (
-                <Feather
-                  name="box"
-                  size={23}
-                  color={color}
-                />
-              )
-            default:
-              return (
-                <Ionicons
-                  name="ellipse-outline"
+                <MaterialCommunityIcons
+                  name="google-lens"
                   size={26}
                   color={color}
                 />
               )
+            case "models":
+              return <Feather name="box" size={26} color={color} />
+            case "rules":
+              return (
+                <MaterialCommunityIcons
+                  name="invoice-text-outline"
+                  size={26}
+                  color={color}
+                />
+              )
+            default:
+              return <Ionicons name="ellipse-outline" size={26} color={color} />
           }
         },
       })}

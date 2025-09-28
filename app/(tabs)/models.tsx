@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useFocusEffect } from "@react-navigation/native"
 import { View, Text, TouchableOpacity, FlatList, Image } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
@@ -72,14 +72,13 @@ export default function Models() {
 
 
     return (
-        <SafeAreaView className="flex-1 bg-white px-3" edges={["top"]}>
-            <Text className="text-2xl font-bold text-gray-900 mb-4">
-                My 3D Models
-            </Text>
-
-            <View>
+        <SafeAreaView className="flex-1 bg-white p-3" edges={["top"]}>
+            <View className="w-full flex-row justify-between items-center mb-3">
+                <Text className="text-2xl font-bold">
+                    Models
+                </Text>
                 <TouchableOpacity
-                    className="bg-red-500 py-2 px-4 rounded-xl mb-4 self-end"
+                    className="bg-red-400 py-2 px-4 rounded-xl self-end"
                     onPress={async () => {
                         await AsyncStorage.removeItem("scannedModels")
                         setModels([])
@@ -91,11 +90,15 @@ export default function Models() {
 
             {models.length === 0 ? (
                 <View className="flex-1 items-center justify-center">
-                    <Text className="text-gray-400 text-lg font-medium text-center px-6">
-                        No models scanned yet.
+                    <Image
+                        source={require('@/assets/illustration/dimensions.png')}
+                        className="w-20 h-20"
+                    />
+                    <Text className="text-black text-xl font-medium text-center px-6 mt-5">
+                        No models scanned yet
                     </Text>
-                    <Text className="text-gray-500 text-sm text-center px-6 mt-2">
-                        Scan a QR code to add your first 3D model here.
+                    <Text className="w-full text-[#6b7280] text-sm text-center px-6 mt-2">
+                        Scan a QR code to add your first 3D model here
                     </Text>
                 </View>
             ) : (
