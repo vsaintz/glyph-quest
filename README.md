@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+### Glyph-Quest
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Glyph-Quest is a mobile application, built with React Native and Expo. It leverages the common QR code as a trigger to load and display 3D models directly on a user's device. The core functionality involves using the phone's camera to scan a QR code that contains a URL to a 3D model file (such as .glb or .gltf). Upon a successful scan, the app fetches the model and renders it in a real-time, interactive viewer. Users can then manipulate the object through intuitive touch gestures including rotation, panning, and zooming to allow for a detailed inspection from any angle.
 
-## Get started
+To create a more persistent experience, every model you discover is automatically saved to a personal in-app gallery. This allows you to easily revisit, review, and show off your collected models without needing to find the original QR code again. The project demonstrates a practical use case for simple augmented reality, ideal for educational purposes, product showcases, or sharing artistic creations.
 
-1. Install dependencies
 
+### Features
+
+* **QR Code Scanning:** Instantly scan any QR code using your device's camera.
+* **Instant 3D Visualization:** If a QR code contains a valid link to a 3D model (`.glb`, `.gltf`), it comes to life in an interactive viewer.
+* **Interactive Controls:** Freely **rotate**, **pan**, and **zoom** in on models to see every detail up close.
+* **Model Gallery:** Every model you discover is automatically saved to your personal collection, so you can revisit your finds anytime.
+
+
+### Tech Stack
+
+This project is built with a modern, cross-platform stack
+
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+
+
+### Installation
+
+**Clone the repository**
+
+   ```bash
+   git clone [https://github.com/your-username/glyph-quest.git]
+   cd glyph-quest
+   ```
+
+**Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+**Run the application**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+### License
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
