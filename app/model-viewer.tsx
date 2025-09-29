@@ -36,7 +36,7 @@ export default function ModelViewer() {
           top: 40,
           right: 20,
           zIndex: 10,
-          backgroundColor: "rgba(255,255,255,0.9)",
+          backgroundColor: "rgba(255,255",
           paddingVertical: 8,
           paddingHorizontal: 12,
           borderRadius: 8,

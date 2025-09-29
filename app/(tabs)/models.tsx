@@ -19,12 +19,12 @@ const modelMetadata: Record<
     "https://vsaintz.github.io/glb-assets/butterfly_key.glb": {
         name: "Key",
         thumbnail: require("@/assets/illustration/camera.png"),
-        description: "First Puzzel.",
+        description: "First puzzel.",
     },
-    "https://example.com/models/chair.glb": {
-        name: "Chair",
+    "https://vsaintz.github.io/glb-assets/hornet.glb": {
+        name: "Hornet",
         thumbnail: require("@/assets/illustration/camera.png"),
-        description: "A cozy wooden chair with soft cushions.",
+        description: "Second puzzel.",
     },
     "https://example.com/models/house.glb": {
         name: "House",
@@ -91,8 +91,8 @@ export default function Models() {
             {models.length === 0 ? (
                 <View className="flex-1 items-center justify-center">
                     <Image
-                        source={require('@/assets/illustration/dimensions.png')}
-                        className="w-20 h-20"
+                        source={require('@/assets/illustration/roadmap.png')}
+                        className="w-28 h-28"
                     />
                     <Text className="text-black text-xl font-medium text-center px-6 mt-5">
                         No models scanned yet

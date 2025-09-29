@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { View, Text, TouchableOpacity, Image, StatusBar } from "react-native"
+import { View, Text, TouchableOpacity, Image } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { CameraView, useCameraPermissions } from "expo-camera"
 import { useRouter } from "expo-router"
@@ -43,7 +43,7 @@ export default function Camera() {
         )
     return (
         <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-            <View style={{ flex: 1}}>
+            <View style={{ flex: 1 }}>
                 <CameraView
                     style={{ flex: 1 }}
                     facing="back"
