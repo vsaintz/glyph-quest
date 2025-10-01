@@ -1,9 +1,9 @@
 import { Tabs } from "expo-router"
 import { Ionicons } from "@expo/vector-icons"
+import TabBar from "@/components/layout/tabbar"
 import Feather from "@expo/vector-icons/Feather"
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
 import type { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs"
-import TabBar from "@/components/layout/tabbar"
 
 export default function TabLayout() {
   return (

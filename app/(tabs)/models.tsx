@@ -1,9 +1,9 @@
 import React, { useState } from "react"
+import { useRouter } from "expo-router"
 import { useFocusEffect } from "@react-navigation/native"
-import { View, Text, TouchableOpacity, FlatList, Image } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import AsyncStorage from "@react-native-async-storage/async-storage"
-import { useRouter } from "expo-router"
+import { View, Text, TouchableOpacity, FlatList, Image } from "react-native"
 
 type ModelItem = {
     url: string
@@ -16,27 +16,36 @@ const modelMetadata: Record<
     string,
     { name: string; thumbnail: any; description: string }
 > = {
-    "https://vsaintz.github.io/glb-assets/butterfly_key.glb": {
-        name: "Key",
-        thumbnail: require("@/assets/illustration/camera.png"),
-        description: "First puzzel.",
+    "https://vsaintz.github.io/glb-assets/tiefling.glb": {
+        name: "Tiefling",
+        thumbnail: require("@/assets/models/tiefling.png"),
+        description: "View and examine this model with dynamic 3D controls.",
     },
     "https://vsaintz.github.io/glb-assets/hornet.glb": {
         name: "Hornet",
-        thumbnail: require("@/assets/illustration/camera.png"),
-        description: "Second puzzel.",
+        thumbnail: require("@/assets/models/hornet.png"),
+        description: "View and examine this model with dynamic 3D controls.",
     },
-    "https://example.com/models/house.glb": {
-        name: "House",
-        thumbnail: require("@/assets/illustration/camera.png"),
-        description: "A stylish modern house with glass windows.",
+    "https://vsaintz.github.io/glb-assets/spidercat.glb": {
+        name: "Spider Cat",
+        thumbnail: require("@/assets/models/spidercat.png"),
+        description: "View and examine this model with dynamic 3D controls.",
+    },
+    "https://vsaintz.github.io/glb-assets/anime_girl.glb": {
+        name: "Anime Girl",
+        thumbnail: require("@/assets/models/anime_girl.png"),
+        description: "View and examine this model with dynamic 3D controls.",
+    },
+    "https://vsaintz.github.io/glb-assets/higokumaru.glb": {
+        name: "Higokumaru",
+        thumbnail: require("@/assets/models/higokumaru.png"),
+        description: "View and examine this model with dynamic 3D controls.",
     },
 }
 
 export default function Models() {
     const router = useRouter()
     const [models, setModels] = useState<ModelItem[]>([])
-
 
     useFocusEffect(
         React.useCallback(() => {
@@ -70,10 +79,9 @@ export default function Models() {
         }, [])
     )
 
-
     return (
         <SafeAreaView className="flex-1 bg-white p-3" edges={["top"]}>
-            <View className="w-full flex-row justify-between items-center mb-3">
+            <View className="w-full flex-row justify-between items-center mb-10">
                 <Text className="text-2xl font-bold">
                     Models
                 </Text>
@@ -82,6 +90,7 @@ export default function Models() {
                     onPress={async () => {
                         await AsyncStorage.removeItem("scannedModels")
                         setModels([])
+                        console.log("Models Cleared!")
                     }}
                 >
                     <Text className="text-white font-medium">Clear All</Text>
