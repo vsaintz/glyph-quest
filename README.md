@@ -29,7 +29,7 @@ This project is built with a modern, cross-platform stack
 **Clone the repository**
 
    ```bash
-   git clone [https://github.com/your-username/glyph-quest.git]
+   git clone https://github.com/vsaintz/glyph-quest.git
    cd glyph-quest
    ```
 
