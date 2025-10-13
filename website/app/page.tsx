@@ -25,11 +25,11 @@ export default function Home() {
           </div>
         </div>
 
-        <h1 className="font-bold text-2xl sm:text-4xl max-w-3xl">
-          A campus-wide digital treasure hunt that challenges your logic, speed, and curiosity.
+        <h1 className="font-bold text-3xl sm:text-4xl max-w-3xl">
+          A Digital Treasure Hunt for the Curious.
         </h1>
 
-        <p className="text-gray-200 font-medium text-sm sm:text-base max-w-2xl">
+        <p className="text-gray-200 text-sm sm:text-base max-w-2xl">
           Download the app to take part in an interactive challenge where every clue, code, and discovery brings you closer to the ultimate reward.
         </p>
 
@@ -38,7 +38,7 @@ export default function Home() {
             text="Download apk"
             icon={<ArrowUpRight size={18} />}
             onClick={handleDownload}
-            className="px-6 py-3 text-sm sm:text-base"
+            className="px-3 py-1 text-sm sm:text-base"
           />
         </div>
       </div>
