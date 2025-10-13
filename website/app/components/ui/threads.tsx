@@ -146,12 +146,6 @@ const Threads: React.FC<ThreadsProps> = ({
         gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
         container.appendChild(gl.canvas);
 
-        gl.canvas.style.position = 'absolute';
-        gl.canvas.style.top = '0';
-        gl.canvas.style.left = '0';
-        gl.canvas.style.width = '100%';
-        gl.canvas.style.height = '100%';
-
         const geometry = new Triangle(gl);
         const program = new Program(gl, {
             vertex: vertexShader,

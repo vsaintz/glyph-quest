@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div className="relative w-full h-[100dvh] flex flex-col justify-center items-center overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-40 overflow-hidden">
         <Threads amplitude={1} distance={0.3} enableMouseInteraction={true} />
       </div>
