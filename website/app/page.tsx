@@ -1,10 +1,21 @@
 "use client"
 
+import Button from "@/app/components/ui/button"
 import { MoveRight, ArrowUpRight } from "lucide-react"
 import Threads from "@/app/components/ui/threads"
-import Button from "@/app/components/ui/button"
 
 export default function Home() {
+
+  const handleDownload = () => {
+    const apkUrl = 'https://github.com/vsaintz/glyph-quest/releases/download/v1.0.0/glyph-quest.apk'
+    const link = document.createElement('a')
+    link.href = apkUrl
+    link.download = 'glyph-quest.apk'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <div className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6">
 
@@ -34,7 +45,7 @@ export default function Home() {
           <Button
             text="Download apk"
             icon={<ArrowUpRight size={18} />}
-            onClick={() => console.log("Downloading...")}
+            onClick={handleDownload}
             className="px-6 py-3 text-sm sm:text-base"
           />
         </div>
