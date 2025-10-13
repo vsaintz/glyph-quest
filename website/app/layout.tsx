@@ -4,13 +4,15 @@ import "./globals.css"
 
 export const metadata = {
   title: 'Glyph Quest',
-  description: 'Tresure Hunt',
+  icons: {
+    icon: "/favicon.ico",
+  }
 }
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], 
-  display: "swap", 
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
