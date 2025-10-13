@@ -17,14 +17,12 @@ export default function Home() {
   }
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6">
-
-      <div className="absolute inset-0 z-0 opacity-40">
+    <div className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-40 overflow-hidden">
         <Threads amplitude={1} distance={0.3} enableMouseInteraction={true} />
       </div>
 
-
-      <div className="relative z-10 w-full max-w-5xl flex flex-col items-center gap-5 text-center">
+      <div className="relative z-10 w-full max-w-full flex flex-col items-center gap-5 text-center">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 text-sm sm:text-base">
           <p className="rounded-xl font-medium border border-border px-3 py-1">Version 1.0</p>
           <div className="flex items-center gap-2">
