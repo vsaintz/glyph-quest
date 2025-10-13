@@ -7,13 +7,7 @@ import Threads from "@/app/components/ui/threads"
 export default function Home() {
 
   const handleDownload = () => {
-    const apkUrl = 'https://github.com/vsaintz/glyph-quest/releases/download/v1.0.0/glyph-quest.apk'
-    const link = document.createElement('a')
-    link.href = apkUrl
-    link.download = 'glyph-quest.apk'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    window.location.href = '/api';
   }
 
   return (
