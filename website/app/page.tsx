@@ -7,7 +7,7 @@ import Threads from "@/app/components/ui/threads"
 export default function Home() {
 
   const handleDownload = () => {
-    window.location.href = '/api';
+    window.location.href = '/api/download'
   }
 
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           A campus-wide digital treasure hunt that challenges your logic, speed, and curiosity.
         </h1>
 
-        <p className="text-gray-200 text-sm sm:text-base max-w-2xl">
+        <p className="text-gray-200 font-medium text-sm sm:text-base max-w-2xl">
           Download the app to take part in an interactive challenge where every clue, code, and discovery brings you closer to the ultimate reward.
         </p>
 
