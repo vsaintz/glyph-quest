@@ -12,19 +12,6 @@ export default function TabLayout() {
         headerShown: false,
         tabBarShowLabel: false,
 
-        tabBarStyle: {
-          position: "absolute",
-          left: 16,
-          right: 16,
-          bottom: 20,
-          height: 55,
-          marginHorizontal: 10,
-          borderRadius: 15,
-          paddingTop: 10,
-          borderWidth: 1,
-          elevation: 0,
-        },
-
         tabBarActiveTintColor: "#000",
         tabBarInactiveTintColor: "#808080",
         tabBarButton: (props) => <TabBar {...props} />,
