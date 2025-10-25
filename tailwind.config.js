@@ -6,7 +6,11 @@ module.exports = {
   ],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Montserrat"],
+      },
+    },
   },
   plugins: [],
 }

@@ -1,3 +1,4 @@
+import React from "react"
 import { Tabs } from "expo-router"
 import { Ionicons } from "@expo/vector-icons"
 import TabBar from "@/components/layout/tabbar"
@@ -11,7 +12,6 @@ export default function TabLayout() {
       screenOptions={({ route }): BottomTabNavigationOptions => ({
         headerShown: false,
         tabBarShowLabel: false,
-
         tabBarActiveTintColor: "#000",
         tabBarInactiveTintColor: "#808080",
         tabBarButton: (props) => <TabBar {...props} />,

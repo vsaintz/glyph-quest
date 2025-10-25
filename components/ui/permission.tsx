@@ -1,4 +1,7 @@
-import { View, Text, Image, TouchableOpacity } from "react-native"
+import React from "react"
+import { View, Image, TouchableOpacity } from "react-native"
+
+import AppText from "@/components/layout/app-text"
 
 type PermissionProps = {
     onRequestPermission: () => void
@@ -9,20 +12,20 @@ export function Permission({ onRequestPermission }: PermissionProps) {
         <View className="flex-1 justify-center items-center bg-white">
             <View className="w-full m-3 px-7">
                 <Image
-                    source={require('@/assets/illustration/camera.png')}
+                    source={{ uri: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399491/2401c64dcfab41c62568_g2tlts.png" }}
                     className="mx-auto w-28 h-28"
                 />
-                <Text className="text-center text-black text-2xl mt-7 mb-4">
+                <AppText className="text-center text-black font-extrabold text-2xl mt-7 mb-4">
                     Enable Camera Access
-                </Text>
-                <Text className="text-center text-[#6b7280] text-sm">
+                </AppText>
+                <AppText className="text-center text-[#7b7b7c] font-bold text-base">
                     To scan QR codes, please grant permission to access your device's camera. The camera will only be used for scanning and no images will be saved.
-                </Text>
+                </AppText>
                 <TouchableOpacity
                     className="bg-black w-auto p-3 rounded-xl mt-7"
                     onPress={onRequestPermission}
                 >
-                    <Text className="text-center text-white"> Grant permission </Text>
+                    <AppText className="text-center text-white font-bold"> Grant permission </AppText>
                 </TouchableOpacity>
             </View>
         </View>

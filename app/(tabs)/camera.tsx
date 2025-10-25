@@ -1,4 +1,4 @@
-import { View, Text } from "react-native"
+import { StatusBar, View } from "react-native"
 import { saveModel } from "@/utils/storage"
 import React, { useState, useCallback } from "react"
 import { useRouter, useFocusEffect } from "expo-router"
@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { CameraView, useCameraPermissions } from "expo-camera"
 
 import { Permission } from "@/components/ui/permission"
+import AppText from "@/components/layout/app-text"
 
 export default function Camera() {
     const [permission, requestPermission] = useCameraPermissions()
@@ -40,9 +41,9 @@ export default function Camera() {
                 />
                 <View className="absolute top-0 left-0 right-0 bottom-0 justify-center items-center">
                     <View className="w-[250px] h-[250px] rounded-2xl border-2 border-white bg-transparent" />
-                    <Text className="text-white text-center mt-5 text-sm">
+                    <AppText className="text-white text-center mt-5 text-sm">
                         Align the QR code within the frame
-                    </Text>
+                    </AppText>
                 </View>
             </View>
         </SafeAreaView>
