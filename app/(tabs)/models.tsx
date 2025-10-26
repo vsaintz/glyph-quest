@@ -18,15 +18,15 @@ const modelMetadata: Record<
     string,
     { name: string; thumbnail: string; description: string }
 > = {
-    "https://vsaintz.github.io/glb-assets/tiefling.glb": {
-        name: "Tiefling",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761392350/WhatsApp_Image_2025-10-25_at_17.05.15_a3cfba91_kez6iv.jpg",
-        description: "View and examine this model with dynamic 3D controls.",
-    },
     "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
         name: "Grandfather Clock",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761398163/c15885f6e7cc0ceb3b08_x0wdp3.jpg",
-        description: "View and examine this model with dynamic 3D controls.",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761484542/c15885f6e7cc0ceb3b08_kjxr77.jpg",
+        description: "Classic clock with intricate details and vintage design.",
+    },
+    "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
+        name: "Radial Symmetry Gear",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761483994/9af0ca3ad1d2d4c9fb29_wo92ye.jpg",
+        description: "Precise symmetrical 3D model of a mechanical gear.",
     },
 }
 
