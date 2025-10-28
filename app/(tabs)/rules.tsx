@@ -9,32 +9,50 @@ export default function Rules() {
         {
             id: 1,
             icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
-            title: 'First Rule',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+            title: 'Venue Boundaries',
+            description: 'The entire hunt takes place inside the building. Do not leave the premises during the event.'
         },
         {
             id: 2,
             icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
-            title: 'Second Rule',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+            title: 'Participants Only',
+            description: 'Only registered participants are allowed to play. If you haven’t registered, please contact a volunteer or event coordinator before joining.'
         },
         {
             id: 3,
             icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
-            title: 'Third Rule',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+            title: 'Solve in Order',
+            description: 'Puzzles must be solved in sequence. Skipping ahead or accessing later clues early will result in disqualification.'
         },
         {
             id: 4,
             icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
-            title: 'Fourth Rule',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+            title: 'Fair Play',
+            description: 'No sharing of answers or clues between teams. Collaboration outside your team is not allowed.'
         },
         {
             id: 5,
             icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
-            title: 'Fifth Rule',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+            title: 'Use of Devices',
+            description: 'Use your phone only for scanning QR codes and solving digital clues. Avoid using the internet for external help.'
+        },
+        {
+            id: 6,
+            icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
+            title: 'Respect the Space',
+            description: 'Do not damage or move any objects in the building. Clues will never be placed in unsafe or restricted areas.'
+        },
+        {
+            id: 7,
+            icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
+            title: 'Time Limit',
+            description: 'Complete the hunt within the given time. Late submissions won’t be counted.'
+        },
+        {
+            id: 8,
+            icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
+            title: 'Need Help?',
+            description: 'If you’re stuck, lost, or unsure ask a volunteer, they’re here to guide, not give away answers.'
         },
     ]
 
@@ -64,7 +82,7 @@ export default function Rules() {
                                 <Image source={{ uri: item.icon }} className="w-10 h-10" />
                                 <View className="flex-1 flex-col gap-1">
                                     <AppText className="text-lg font-bold">{item.title}</AppText>
-                                    <AppText className="text-md font-semibold text-[#7b7b7c] p-1">
+                                    <AppText className="text-md font-semibold text-[#7b7b7c]">
                                         {item.description}
                                     </AppText>
                                 </View>
