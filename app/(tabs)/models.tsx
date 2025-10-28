@@ -18,14 +18,29 @@ const modelMetadata: Record<
     string,
     { name: string; thumbnail: string; description: string }
 > = {
+    "https://vsaintz.github.io/glb-assets/gothic_table.glb": {
+        name: "Gothic Table",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761671233/db2bc849c5e99c5e97a09_ianm5s.jpg",
+        description: "Gothic style table with ornate arches and dark elegance.",
+    },
     "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
         name: "Grandfather Clock",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761484542/c15885f6e7cc0ceb3b08_kjxr77.jpg",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761675349/833e0870a7700c096e5c_yonizl.jpg",
         description: "Classic clock with intricate details and vintage design.",
+    },
+    "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
+        name: "Papers Envelopes",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761672289/e3bbb743497a0f0c805d9_uoebsh.jpg",
+        description: "Model of paper envelopes with folded edges and soft texture.",
+    },
+    "https://vsaintz.github.io/glb-assets/hologram_projector.glb": {
+        name: "Villager Hologram",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761674762/a29bb743497a0f0c805d99_yqvnew.jpg",
+        description: "Model of a Minecraft villager hologram with glow.",
     },
     "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
         name: "Radial Symmetry Gear",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761483994/9af0ca3ad1d2d4c9fb29_wo92ye.jpg",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761675681/9af0ca3ad1d2d4c9fb29_wo92ye_fm9e7z.jpg",
         description: "Precise symmetrical 3D model of a mechanical gear.",
     },
 }
