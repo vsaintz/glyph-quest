@@ -38,7 +38,7 @@ const modelMetadata: Record<
   "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761711545/80a8ceecaef65d89c833_udql29.jpg",
-    hint: "I turn the worthless into gold, My craft is ancient, secret, old. I mix, I burn, I change, I mend. What am I, that can transform without end?",
+    hint: "I turn the worthless into gold, My craft is ancient, secret, old. I mix, I burn, I change, I mend. Who am I?",
   },
   "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
     image:
