@@ -38,6 +38,11 @@ const modelMetadata: Record<
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761674762/a29bb743497a0f0c805d99_yqvnew.jpg",
         description: "Model of a Minecraft villager hologram with glow.",
     },
+    "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
+        name: "Magic Book",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761711777/80a8ceecaef65d89c8339_f12fsy.jpg",
+        description: "Aged grimoire collection of forgotten spells.",
+    },
     "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
         name: "Radial Symmetry Gear",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761675681/9af0ca3ad1d2d4c9fb29_wo92ye_fm9e7z.jpg",

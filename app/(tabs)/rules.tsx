@@ -40,7 +40,7 @@ export default function Rules() {
             id: 6,
             icon: "https://res.cloudinary.com/defh2c1db/image/upload/v1761399498/13bcbd03e372a67ef114_ejye54.png",
             title: 'Respect the Space',
-            description: 'Do not damage or move any objects in the building. Clues will never be placed in unsafe or restricted areas.'
+            description: 'If you think the clue is hidden behind something, ask a volunteer for help. Do not remove or move any objects yourself.'
         },
         {
             id: 7,
@@ -80,9 +80,9 @@ export default function Rules() {
                         {rules.map((item) => (
                             <View key={item.id} className="flex-row gap-2 w-full border border-[#c6c6c6] rounded-xl py-3 px-1">
                                 <Image source={{ uri: item.icon }} className="w-10 h-10" />
-                                <View className="flex-1 flex-col gap-1">
+                                <View className="flex-1 flex-col">
                                     <AppText className="text-lg font-bold">{item.title}</AppText>
-                                    <AppText className="text-md font-semibold text-[#7b7b7c]">
+                                    <AppText className="text-md font-semibold p-1 text-[#7b7b7c]">
                                         {item.description}
                                     </AppText>
                                 </View>

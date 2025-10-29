@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { WebView } from "react-native-webview"
-import { View, ScrollView, StatusBar } from "react-native"
+import { View, ScrollView, StatusBar, ActivityIndicator } from "react-native"
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context"
 import { useLocalSearchParams } from "expo-router"
 
@@ -11,43 +11,51 @@ const modelMetadata: Record<
   { color?: string; image?: string; hint?: string }
 > = {
   "https://vsaintz.github.io/glb-assets/gothic_table.glb": {
-    image: "https://res.cloudinary.com/defh2c1db/image/upload/v1761671054/db2bc849c5e99c5e97a0_zggzqs.jpg",
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761671054/db2bc849c5e99c5e97a0_zggzqs.jpg",
     hint: "I wear a coat of green or blue, With white lines straight and borders true. A net divides my steady face, Where paddles sing and balls race.",
   },
   "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
-    image: "https://res.cloudinary.com/defh2c1db/image/upload/v1761398180/5615eb835be1cd207e53_hvlqru.jpg",
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761398180/5615eb835be1cd207e53_hvlqru.jpg",
     hint: "I have a face you'll find in this place. I have hands, but I've given up the race. Three steps higher reveals my face.",
   },
   "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
-    image: "https://res.cloudinary.com/defh2c1db/image/upload/v1761671872/e3bbb743497a0f0c805d_tcyege.jpg",
-    hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me."
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761671872/e3bbb743497a0f0c805d_tcyege.jpg",
+    hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me.",
   },
   "https://vsaintz.github.io/glb-assets/hologram_projector.glb": {
-    image: "https://res.cloudinary.com/defh2c1db/image/upload/v1761673839/a29bb743497a0f0c805d9_y34qdd.jpg",
-    hint: "I hang in wait, tall and wide, I rise and fall but never stride, I’ve seen your learning, heard your lore, I linger where the climb is no more."
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761673839/a29bb743497a0f0c805d9_y34qdd.jpg",
+    hint: "I hang in wait, tall and wide, I rise and fall but never stride, I’ve seen your learning, heard your lore, I linger where the climb is no more.",
   },
   "https://vsaintz.github.io/glb-assets/giza_pyramid_complex_from_civilization_vi.glb": {
-    image: "https://res.cloudinary.com/defh2c1db/image/upload/v1761671872/e3bbb743497a0f0c805d_tcyege.jpg",
-    hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me."
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761671872/e3bbb743497a0f0c805d_tcyege.jpg",
+    hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me.",
+  },
+  "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761711545/80a8ceecaef65d89c833_udql29.jpg",
+    hint: "I turn the worthless into gold, My craft is ancient, secret, old. I mix, I burn, I change, I mend. What am I, that can transform without end?",
   },
   "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
-    image: "https://res.cloudinary.com/defh2c1db/image/upload/v1761483864/8af0ca3ad1d2d4c9fb29_tbyuy3.jpg",
-    hint: "This is one part of a complex design. Find the quiet hall where all knowledge aligns. Seek the aisle of code and machines. Your code waits in the book that manages the machine."
-  }
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761483864/8af0ca3ad1d2d4c9fb29_tbyuy3.jpg",
+    hint: "This is one part of a complex design. Find the quiet hall where all knowledge aligns. Seek the aisle of code and machines. Your code waits in the book that manages the machine.",
+  },
 }
 
 export default function ModelViewer() {
   const { modelUrl } = useLocalSearchParams<{ modelUrl: string }>()
   const insets = useSafeAreaInsets()
+  const [loading, setLoading] = useState(true)
 
   const metadata = modelMetadata[modelUrl] || {}
   const bgColor = metadata.color || "#000"
   const bgImage = metadata.image
   const hint = metadata.hint
-
-  const backgroundStyle = bgImage
-    ? `background: url('${bgImage}') center/cover no-repeat`
-    : `background-color: ${bgColor};`
 
   const html = `
   <html>
@@ -67,7 +75,7 @@ export default function ModelViewer() {
       ? `background: url('${bgImage}') center/cover no-repeat;`
       : `background-color: ${bgColor};`}
           filter: blur(5px);
-          transform: scale(1.1); /* prevent blur edges */
+          transform: scale(1.1);
           z-index: 0;
         }
 
@@ -95,7 +103,32 @@ export default function ModelViewer() {
     <SafeAreaView className="flex-1 bg-[#000]" edges={["top"]}>
       <StatusBar barStyle="light-content" />
       <View className="flex-1 relative">
-        <WebView source={{ html }} style={{ flex: 1 }} />
+        <WebView
+          source={{ html }}
+          style={{ flex: 1 }}
+          onLoadEnd={() => setLoading(false)}
+        />
+
+        {loading && (
+          <View
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0,0,0,0.7)",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 10,
+            }}
+          >
+            <ActivityIndicator size="large" color="#fff" />
+            <AppText style={{ color: "#fff", marginTop: 10 }}>
+              Loading model...
+            </AppText>
+          </View>
+        )}
 
         {hint && (
           <View
