@@ -22,7 +22,7 @@ const modelMetadata: Record<
   },
   "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
     image:
-      "https://res.cloudinary.com/defh2c1db/image/upload/v1761671872/e3bbb743497a0f0c805d_tcyege.jpg",
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761816798/a9b5ee2257984e3b0a44_euckbf.jpg",
     hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me.",
   },
   "https://vsaintz.github.io/glb-assets/hologram_projector.glb": {
@@ -33,7 +33,7 @@ const modelMetadata: Record<
   "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761711545/80a8ceecaef65d89c833_udql29.jpg",
-    hint: "I turn the worthless into gold, My craft is ancient, secret, old. I mix, I burn, I change, I mend. Who am I?",
+    hint: "I have no opinions, I take no side, But in my pages, truths reside. I judge no word, from worst to best, but simply put them to the test. Who am I?",
   },
   "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
     image:
