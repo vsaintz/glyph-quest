@@ -23,6 +23,16 @@ const modelMetadata: Record<
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761671233/db2bc849c5e99c5e97a09_ianm5s.jpg",
         description: "Gothic style table with ornate arches and dark elegance.",
     },
+    "https://vsaintz.github.io/glb-assets/extinguisher.glb": {
+        name: "Fire Extinguisher",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761844476/eba320827e821befbe927_pezf4l.jpg",
+        description: "Important safety tool for stopping a small fire.",
+    },
+    "https://vsaintz.github.io/glb-assets/dumpster.glb": {
+        name: "Dumpster",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761845207/aba320827e821befbe924_bx6wyi.jpg",
+        description: "Unsung hero of waste management on campus.",
+    },
     "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
         name: "Grandfather Clock",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761675349/833e0870a7700c096e5c_yonizl.jpg",
@@ -42,12 +52,7 @@ const modelMetadata: Record<
         name: "Magic Book",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761711777/80a8ceecaef65d89c8339_f12fsy.jpg",
         description: "Aged grimoire collection of forgotten spells.",
-    },
-    "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
-        name: "Radial Symmetry Gear",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761675681/9af0ca3ad1d2d4c9fb29_wo92ye_fm9e7z.jpg",
-        description: "Precise symmetrical 3D model of a mechanical gear.",
-    },
+    }
 }
 
 export default function Models() {

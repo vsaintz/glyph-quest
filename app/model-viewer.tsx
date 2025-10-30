@@ -15,31 +15,36 @@ const modelMetadata: Record<
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761671054/db2bc849c5e99c5e97a0_zggzqs.jpg",
     hint: "I wear a coat of green or blue, With white lines straight and borders true. A net divides my steady face, Where paddles sing and balls race.",
   },
+  "https://vsaintz.github.io/glb-assets/extinguisher.glb": {
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761843479/eba320827e821befbe92_mxeiuu.jpg",
+    hint: "I wait on the level that is neither prime nor composite. I have a pin but cannot sew, a hose but cannot water, I am the last resort when things get hotter.",
+  },
+  "https://vsaintz.github.io/glb-assets/dumpster.glb": {
+    image:
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761844609/aba320827e821befbe92_dsfp0e.jpg",
+    hint: "I wait on the level that is neither prime nor composite, ready to hold whatever you deposit. I feast on your wrappers, your drafts, and your waste. I have a big mouth but no sense of taste.",
+  },
   "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761398180/5615eb835be1cd207e53_hvlqru.jpg",
-    hint: "I have a face you'll find in this place. I have hands, but I've given up the race. Three steps higher reveals my face.",
+    hint: "I have a face that marks no race, my hands are frozen in their place. See what the time my twin displays, behind my face, the code awaits.",
   },
   "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761816798/a9b5ee2257984e3b0a44_euckbf.jpg",
-    hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me.",
+    hint: "Climb up twice and you’ll find me there, I guard your thoughts with patient care. I keep your whispers, never told. Look beneath where secrets unfold.",
   },
   "https://vsaintz.github.io/glb-assets/hologram_projector.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761673839/a29bb743497a0f0c805d9_y34qdd.jpg",
-    hint: "I hang in wait, tall and wide, I rise and fall but never stride, I’ve seen your learning, heard your lore, I linger where the climb is no more.",
+    hint: "I linger where the climb is no more, I rise and fall yet touch the floor. I help your lessons shine so bright, your hidden clue stays out of sight.",
   },
   "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761711545/80a8ceecaef65d89c833_udql29.jpg",
-    hint: "I have no opinions, I take no side, But in my pages, truths reside. I judge no word, from worst to best, but simply put them to the test. Who am I?",
-  },
-  "https://vsaintz.github.io/glb-assets/radial_symmetry.glb": {
-    image:
-      "https://res.cloudinary.com/defh2c1db/image/upload/v1761483864/8af0ca3ad1d2d4c9fb29_tbyuy3.jpg",
-    hint: "This is one part of a complex design. Find the quiet hall where all knowledge aligns. Seek the aisle of code and machines. Your code waits in the book that manages the machine.",
-  },
+    hint: "I hold every word, both big and small, I speak to none, yet define them all. Seek my pages where meanings hide, your treasure waits deep inside.",
+  }
 }
 
 export default function ModelViewer() {
@@ -138,7 +143,7 @@ export default function ModelViewer() {
           </View>
         )}
 
-        {hint && (
+        {!loading && hint && (
           <View
             style={{
               position: "absolute",
