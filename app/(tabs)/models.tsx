@@ -30,7 +30,7 @@ const modelMetadata: Record<
     },
     "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
         name: "Papers Envelopes",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761672289/e3bbb743497a0f0c805d9_uoebsh.jpg",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761816992/a9b5ee2257984e3b0a447_sn1vot.jpg",
         description: "Model of paper envelopes with folded edges and soft texture.",
     },
     "https://vsaintz.github.io/glb-assets/hologram_projector.glb": {

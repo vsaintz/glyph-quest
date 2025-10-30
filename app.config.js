@@ -1,5 +1,3 @@
-import "dotenv/config";
-
 export default {
   expo: {
     name: "Glyph Quest",
@@ -72,12 +70,12 @@ export default {
         projectId: "5ddb5d77-11cd-448f-ab7e-2709edbd997e",
       },
       firebase: {
-        apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
-        authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
-        projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
-        storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
-        messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-        appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+        apiKey: "AIzaSyDr8C2UXG2YoSfCPu8S0IhTUqrVIOARBrM",
+        authDomain: "glyph-quest-49aeb.firebaseapp.com",
+        projectId: "glyph-quest-49aeb",
+        storageBucket: "glyph-quest-49aeb.firebasestorage.app",
+        messagingSenderId: "981705871431",
+        appId: "1:981705871431:android:d5957e92e3728e5439a162",
       },
     },
   },
