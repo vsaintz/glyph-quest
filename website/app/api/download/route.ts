@@ -1,6 +1,6 @@
 
 export async function GET() {
-  const apkUrl = 'https://github.com/vsaintz/glyph-quest/releases/download/v1.0.1/glyph-quest.apk'
+  const apkUrl = 'https://github.com/vsaintz/glyph-quest/releases/download/v1.0.2/glyphquest_v1.0.2.apk'
 
   try {
     const response = await fetch(apkUrl)
