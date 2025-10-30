@@ -76,7 +76,7 @@ export default function Rules() {
                         </AppText>
                     </View>
 
-                    <View className="flex-col gap-5 mt-1 mb-5">
+                    <View className="flex-col gap-3 mt-1 mb-5">
                         {rules.map((item) => (
                             <View key={item.id} className="flex-row gap-2 w-full border border-[#c6c6c6] rounded-xl py-3 px-1">
                                 <Image source={{ uri: item.icon }} className="w-10 h-10" />
