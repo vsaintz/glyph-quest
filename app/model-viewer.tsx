@@ -30,11 +30,6 @@ const modelMetadata: Record<
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761673839/a29bb743497a0f0c805d9_y34qdd.jpg",
     hint: "I hang in wait, tall and wide, I rise and fall but never stride, I’ve seen your learning, heard your lore, I linger where the climb is no more.",
   },
-  "https://vsaintz.github.io/glb-assets/giza_pyramid_complex_from_civilization_vi.glb": {
-    image:
-      "https://res.cloudinary.com/defh2c1db/image/upload/v1761671872/e3bbb743497a0f0c805d_tcyege.jpg",
-    hint: "I hold ideas, not treasure or fee, I guard your thoughts in secrecy, climb up twice and you’ll find me.",
-  },
   "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761711545/80a8ceecaef65d89c833_udql29.jpg",
@@ -90,11 +85,19 @@ export default function ModelViewer() {
     </head>
     <body>
       <model-viewer 
+        id="model"
         src="${modelUrl}" 
         camera-controls
         interaction-prompt="auto"
         shadow-intensity="1"
       ></model-viewer>
+
+      <script>
+        const viewer = document.getElementById('model');
+        viewer.addEventListener('load', () => {
+          window.ReactNativeWebView.postMessage('MODEL_LOADED');
+        });
+      </script>
     </body>
   </html>
 `
@@ -106,7 +109,12 @@ export default function ModelViewer() {
         <WebView
           source={{ html }}
           style={{ flex: 1 }}
-          onLoadEnd={() => setLoading(false)}
+          onMessage={(event) => {
+            if (event.nativeEvent.data === "MODEL_LOADED") {
+              setLoading(false)
+            }
+          }}
+          onError={() => setLoading(false)}
         />
 
         {loading && (
