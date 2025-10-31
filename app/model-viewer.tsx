@@ -10,25 +10,23 @@ const modelMetadata: Record<
   string,
   { color?: string; image?: string; hint?: string }
 > = {
-  "https://vsaintz.github.io/glb-assets/gothic_table.glb": {
-    image:
-      "https://res.cloudinary.com/defh2c1db/image/upload/v1761671054/db2bc849c5e99c5e97a0_zggzqs.jpg",
-    hint: "I wear a coat of green or blue, With white lines straight and borders true. A net divides my steady face, Where paddles sing and balls race.",
+  "https://vsaintz.github.io/glb-assets/sphere_shading.glb": {
+    hint: "I wear a coat of green or blue, with white lines straight and borders true. A net divides my steady face, Where paddles sing and balls race.",
   },
   "https://vsaintz.github.io/glb-assets/extinguisher.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761843479/eba320827e821befbe92_mxeiuu.jpg",
     hint: "I wait on the level that is neither prime nor composite. I have a pin but cannot sew, a hose but cannot water, I am the last resort when things get hotter.",
   },
-  "https://vsaintz.github.io/glb-assets/dumpster.glb": {
+  "https://vsaintz.github.io/glb-assets/trash_can_low_poly_free.glb": {
     image:
-      "https://res.cloudinary.com/defh2c1db/image/upload/v1761844609/aba320827e821befbe92_dsfp0e.jpg",
-    hint: "I wait on the level that is neither prime nor composite, ready to hold whatever you deposit. I feast on your wrappers, your drafts, and your waste. I have a big mouth but no sense of taste.",
+      "https://res.cloudinary.com/defh2c1db/image/upload/v1761927998/eee176eb01c76f487eec_qo9xmo.jpg",
+    hint: "I wait where twice of two rooms rise, beside the lessons and busy sighs. I swallow your crumbs, your notes, your haste, a silent keeper of all you waste.",
   },
   "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761398180/5615eb835be1cd207e53_hvlqru.jpg",
-    hint: "I have a face that marks no race, my hands are frozen in their place. See what the time my twin displays, behind my face, the code awaits.",
+    hint: "I have a face that marks no race, my hands are frozen in their place. Seek what the time my twin displays, behind my face, the code awaits.",
   },
   "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
     image:
