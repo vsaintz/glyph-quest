@@ -2,7 +2,7 @@ export default {
   expo: {
     name: "Glyph Quest",
     slug: "glyph-quest",
-    version: "1.0.0",
+    version: "1.0.2",
     orientation: "portrait",
     icon: "./assets/images/icon.png",
     scheme: "glyphquest",
