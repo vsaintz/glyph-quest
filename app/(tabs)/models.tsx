@@ -18,20 +18,20 @@ const modelMetadata: Record<
     string,
     { name: string; thumbnail: string; description: string }
 > = {
-    "https://vsaintz.github.io/glb-assets/gothic_table.glb": {
-        name: "Gothic Table",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761671233/db2bc849c5e99c5e97a09_ianm5s.jpg",
-        description: "Gothic style table with ornate arches and dark elegance.",
+    "https://vsaintz.github.io/glb-assets/sphere_shading.glb": {
+        name: "Shaded Sphere",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761931566/aee176eb01c76f487eect_lbfsq8.jpg",
+        description: "A smooth sphere shaped by shade and symmetry.",
     },
     "https://vsaintz.github.io/glb-assets/extinguisher.glb": {
         name: "Fire Extinguisher",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761844476/eba320827e821befbe927_pezf4l.jpg",
-        description: "Important safety tool for stopping a small fire.",
+        description: "A bright red cylinder with a black grip and yellow nozzle.",
     },
-    "https://vsaintz.github.io/glb-assets/dumpster.glb": {
-        name: "Dumpster",
-        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761845207/aba320827e821befbe924_bx6wyi.jpg",
-        description: "Unsung hero of waste management on campus.",
+    "https://vsaintz.github.io/glb-assets/trash_can_low_poly_free.glb": {
+        name: "Reclaimer",
+        thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761929590/eee176eb01c76f487eect_ixckli.jpg",
+        description: "A white vessel marked with the cycle of renewal.",
     },
     "https://vsaintz.github.io/glb-assets/grandfather_clock.glb": {
         name: "Grandfather Clock",
@@ -51,7 +51,7 @@ const modelMetadata: Record<
     "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
         name: "Magic Book",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761711777/80a8ceecaef65d89c8339_f12fsy.jpg",
-        description: "Aged grimoire collection of forgotten spells.",
+        description: "Aged grimoire collection of forgotten spell books.",
     }
 }
 
