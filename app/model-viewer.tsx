@@ -13,12 +13,12 @@ const modelMetadata: Record<
   "https://vsaintz.github.io/glb-assets/sphere_shading.glb": {
     hint: "I wear a coat of green or blue, with white lines straight and borders true. A net divides my steady face, Where paddles sing and balls race.",
   },
-  "https://vsaintz.github.io/glb-assets/extinguisher.glb": {
+  "https://vsaintz.github.io/glb-assets/fire_extinguisher.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761843479/eba320827e821befbe92_mxeiuu.jpg",
     hint: "I wait on the level that is neither prime nor composite. I have a pin but cannot sew, a hose but cannot water, I am the last resort when things get hotter.",
   },
-  "https://vsaintz.github.io/glb-assets/trash_can_low_poly_free.glb": {
+  "https://vsaintz.github.io/glb-assets/recyclebin.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761927998/eee176eb01c76f487eec_qo9xmo.jpg",
     hint: "I wait where twice of two rooms rise, beside the lessons and busy sighs. I swallow your crumbs, your notes, your haste, a silent keeper of all you waste.",
@@ -28,7 +28,7 @@ const modelMetadata: Record<
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761398180/5615eb835be1cd207e53_hvlqru.jpg",
     hint: "I have a face that marks no race, my hands are frozen in their place. Seek what the time my twin displays, behind my face, the code awaits.",
   },
-  "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
+  "https://vsaintz.github.io/glb-assets/papers_envelopes.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761816798/a9b5ee2257984e3b0a44_euckbf.jpg",
     hint: "Climb up twice and you’ll find me there, I guard your thoughts with patient care. I keep your whispers, never told. Look beneath where secrets unfold.",
@@ -38,7 +38,7 @@ const modelMetadata: Record<
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761673839/a29bb743497a0f0c805d9_y34qdd.jpg",
     hint: "I linger where the climb is no more, I rise and fall yet touch the floor. I help your lessons shine so bright, your hidden clue stays out of sight.",
   },
-  "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
+  "https://vsaintz.github.io/glb-assets/magic_book.glb": {
     image:
       "https://res.cloudinary.com/defh2c1db/image/upload/v1761711545/80a8ceecaef65d89c833_udql29.jpg",
     hint: "I hold every word, both big and small, I speak to none, yet define them all. Seek my pages where meanings hide, your treasure waits deep inside.",

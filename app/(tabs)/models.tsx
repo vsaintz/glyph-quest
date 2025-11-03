@@ -23,12 +23,12 @@ const modelMetadata: Record<
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761931566/aee176eb01c76f487eect_lbfsq8.jpg",
         description: "A smooth sphere shaped by shade and symmetry.",
     },
-    "https://vsaintz.github.io/glb-assets/extinguisher.glb": {
+    "https://vsaintz.github.io/glb-assets/fire_extinguisher.glb": {
         name: "Fire Extinguisher",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761844476/eba320827e821befbe927_pezf4l.jpg",
         description: "A bright red cylinder with a black grip and yellow nozzle.",
     },
-    "https://vsaintz.github.io/glb-assets/trash_can_low_poly_free.glb": {
+    "https://vsaintz.github.io/glb-assets/recyclebin.glb": {
         name: "Reclaimer",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761929590/eee176eb01c76f487eect_ixckli.jpg",
         description: "A white vessel marked with the cycle of renewal.",
@@ -38,7 +38,7 @@ const modelMetadata: Record<
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761675349/833e0870a7700c096e5c_yonizl.jpg",
         description: "Classic clock with intricate details and vintage design.",
     },
-    "https://vsaintz.github.io/glb-assets/papers__envelopes.glb": {
+    "https://vsaintz.github.io/glb-assets/papers_envelopes.glb": {
         name: "Papers Envelopes",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761816992/a9b5ee2257984e3b0a447_sn1vot.jpg",
         description: "Model of paper envelopes with folded edges and soft texture.",
@@ -48,7 +48,7 @@ const modelMetadata: Record<
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761674762/a29bb743497a0f0c805d99_yqvnew.jpg",
         description: "Model of a Minecraft villager hologram with glow.",
     },
-    "https://vsaintz.github.io/glb-assets/magic_book_set.glb": {
+    "https://vsaintz.github.io/glb-assets/magic_book.glb": {
         name: "Magic Book",
         thumbnail: "https://res.cloudinary.com/defh2c1db/image/upload/v1761711777/80a8ceecaef65d89c8339_f12fsy.jpg",
         description: "Aged grimoire collection of forgotten spell books.",
@@ -73,7 +73,7 @@ export default function Models() {
                                 name: meta?.name || "Unknown Model",
                                 thumbnail:
                                     meta?.thumbnail ||
-                                    "https://res.cloudinary.com/defh2c1db/image/upload/v1761395936/674091f98513a0ad97ac_qxqk5r.jpg",
+                                    "https://res.cloudinary.com/defh2c1db/image/upload/v1762190503/43a8db070542dfbc88d4_ydewet.png",
                                 description: meta?.description || "No description available.",
                             }
                         })
