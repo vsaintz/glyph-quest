@@ -4,7 +4,6 @@ import { StatusBar } from "react-native"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import { useFonts, Montserrat_400Regular } from "@expo-google-fonts/montserrat"
 import "@/global.css"
-import EventOverlay from "@/components/ui/event-overlay"
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -24,7 +23,6 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" />
       </Stack>
 
-      <EventOverlay />
     </SafeAreaProvider>
   )
 }
