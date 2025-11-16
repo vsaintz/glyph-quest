@@ -1,16 +1,19 @@
 ### Glyph-Quest
 
-Glyph-Quest is a mobile application, built with React Native and Expo. It leverages the common QR code as a trigger to load and display 3D models directly on a user's device. The core functionality involves using the phone's camera to scan a QR code that contains a URL to a 3D model file (such as .glb or .gltf). Upon a successful scan, the app fetches the model and renders it in a real-time, interactive viewer. Users can then manipulate the object through intuitive touch gestures including rotation, panning, and zooming to allow for a detailed inspection from any angle.
+Glyph-Quest is a mobile application developed for our college’s tech-themed treasure hunt. Built with React Native and Expo, the app uses QR codes placed around the campus to load 3D models that contain riddles or hints leading to the next location.
 
-To create a more persistent experience, every model you discover is automatically saved to a personal in-app gallery. This allows you to easily revisit, review, and show off your collected models without needing to find the original QR code again. The project demonstrates a practical use case for simple augmented reality, ideal for educational purposes, product showcases, or sharing artistic creations.
-
+The integrated 3D viewer allows users to rotate, pan, and zoom each model, making it possible to examine the riddle from multiple angles. All scanned models are automatically saved in app gallery, participants can revisit previous clues at any time without needing to rescan the corresponding QR code.
 
 ### Features
 
-* **QR Code Scanning:** Instantly scan any QR code using your device's camera.
-* **Instant 3D Visualization:** If a QR code contains a valid link to a 3D model (`.glb`, `.gltf`), it comes to life in an interactive viewer.
-* **Interactive Controls:** Freely **rotate**, **pan**, and **zoom** in on models to see every detail up close.
-* **Model Gallery:** Every model you discover is automatically saved to your personal collection, so you can revisit your finds anytime.
+- **QR Code Scanning**: Scan QR codes directly using the device’s camera.
+
+- **3D Visualization**: If the QR code contains a valid .glb model link, the app loads it in an 
+interactive viewer.
+
+- **Interactive Controls**: Rotate, pan, and zoom the model as needed.
+
+- **Model Gallery**: All scanned models are automatically saved to the user’s collection for later access.
 
 
 ### Tech Stack
