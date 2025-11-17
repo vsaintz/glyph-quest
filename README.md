@@ -4,6 +4,11 @@ Glyph-Quest is a mobile application developed for our college’s tech-themed tr
 
 The integrated 3D viewer allows users to rotate, pan, and zoom each model, making it possible to examine the riddle from multiple angles. All scanned models are automatically saved in app gallery, participants can revisit previous clues at any time without needing to rescan the corresponding QR code.
 
+### User Interface
+
+![app:ui](https://res.cloudinary.com/defh2c1db/image/upload/v1763382204/c00e9381727c60afa049_jnnbly.png)
+
+
 ### Features
 
 - **QR Code Scanning**: Scan QR codes directly using the device’s camera.
@@ -15,6 +20,12 @@ interactive viewer.
 
 - **Model Gallery**: All scanned models are automatically saved to the user’s collection for later access.
 
+### Website
+
+You can download the app directly from the website.
+
+[![app:website](https://res.cloudinary.com/defh2c1db/image/upload/v1763382538/5545017ea3b5bec6a4fb_pr4pxs.png)](https://glyph-quest.vercel.app/)
+
 
 ### Tech Stack
 
@@ -25,7 +36,6 @@ This project is built with a modern, cross-platform stack
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-
 
 ### Installation
 
@@ -48,4 +58,4 @@ This project is built with a modern, cross-platform stack
 
 ### License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [`LICENSE`](LICENSE) file for details.
